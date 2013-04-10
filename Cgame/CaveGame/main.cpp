@@ -306,11 +306,11 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLi
 
 	bool reset = false;
 
-	sprintf_s(menuStartStr,50,"Start Game");
+	sprintf_s(menuStartStr,50,"  Start Game");
 
-	sprintf_s(mainMenuStr,50,"Main Menu");
+	sprintf_s(mainMenuStr,50,"  Main Menu");
 
-	sprintf_s(menuQuitGameStr,50,"Quit Game");
+	sprintf_s(menuQuitGameStr,50,"  Quit Game");
 
 	LPDIRECT3DSURFACE9 menuSurface;	
 	LPDIRECT3DSURFACE9 gameSurface;
@@ -325,7 +325,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLi
 	ZeroMemory( &msg, sizeof( msg ) );
 
 	// Game Font
-	cD3DXFont* caveMenuFont = new cD3DXFont(d3dMgr->getTheD3DDevice(),hInstance, "Redcap Bloodthirsty");
+	cD3DXFont* caveMenuFont = new cD3DXFont(d3dMgr->getTheD3DDevice(),hInstance, "Redcap");
 
 
 	// Create the background surfaces
@@ -346,9 +346,9 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLi
 	SetRect(&AttackButton, 50, 200, 200, 250);
 	SetRect(&DefendButton, 50, 275, 200, 325);
 
-	SetRect(&playerHpBox,20, 570, 250, 600);
-	SetRect(&enemieHpBox,500, 570, 800, 600);
-	SetRect(&turnsBeforeAttackBox,300, 570, 450, 600);
+	SetRect(&playerHpBox,20, 560, 250, 600);
+	SetRect(&enemieHpBox,550, 560, 800, 600);
+	SetRect(&turnsBeforeAttackBox,300, 560, 500, 600);
 
 	srand((unsigned int)time(NULL));
 	turnBeforeAttack = (rand() % 3 + 1);
